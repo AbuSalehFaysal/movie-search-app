@@ -1,11 +1,14 @@
-<h1>Results Page</h1>
-<ul>
-    <% data["Search"].forEach(movie => { %>
-        <li>
-            <strong><%= movie["Title"]%></strong>  - <%= movie["Year"] %>
-        </li> 
-     <% }) %>
-</ul>
-
-
-<a href="/">Search Again!</a>
+<%- include('partials/header'); -%> 
+<div class="container">
+    <h1 class="display-4 text-center">Here's What You Got!!!</h1>
+    <ul class="list-group mb-2">
+        <% data["Search"].forEach(movie => { %>
+        <li class="list-group-item d-flex justify-content-between align-items-center">
+            <strong><%= movie["Title"]%></strong>  
+          <span class="badge badge-primary badge-pill"><%= movie["Year"] %></span>
+        </li>
+        <% }) %>
+    </ul>
+    <a class="btn btn-info btn-block btn-lg" href="/">Search Again!</a>
+</div>
+<%- include('partials/footer'); -%>

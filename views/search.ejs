@@ -1,6 +1,17 @@
-<h1>Search Page</h1>
-
-<form action="/results" method="GET">
-    <input type="text" placeholder="Movie Title" name="search">
-    <input type="submit" value="submit">
-</form>
+<%- include('partials/header'); -%> 
+  <div class="mt-5">
+    <h1 class="display-4 container text-center mt-10 mb-3">Type The Keyword of Your Favorite Movie</h1>
+    <div class="container">
+      <form action="/results" method="GET">
+        <div class="input-group input-group-lg mb-3">
+          <div class="input-group-prepend">
+            <span class="input-group-text" id="inputGroup-sizing-lg">Keyword</span>
+          </div>
+          <input type="text" name="search" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg">
+        </div>
+        <input class="btn btn-primary btn-block btn-lg" type="submit" value="SUBMIT" />
+      </form>
+    </div>
+  </div>
+<%- include('partials/footer'); -%>
+  
