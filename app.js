@@ -19,6 +19,8 @@ app.get("/", function(req, res){
     res.render("search");
 });
 
-app.listen(9000, function () {
-    console.log("Server has started!");
-});
+// app.listen(8000, function () {
+//     console.log("Server has started!");
+// });
+
+app.listen(process.env.PORT, process.env.IP);
